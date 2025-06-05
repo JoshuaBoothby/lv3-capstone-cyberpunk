@@ -217,7 +217,7 @@ export default function CyberpunksModal({
           Cancel
         </Button>
         <Button variant="primary" onClick={onSave}>
-          Save CyberGoon
+          Hire CyberGoon
         </Button>
       </Modal.Footer>
     </Modal>
