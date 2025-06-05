@@ -34,10 +34,10 @@ describe("CyberpunksModal Component", () => {
     expect(mockProps.onChange).toHaveBeenCalled();
   });
 
-  it("handles save button click", () => {
+  it("handles hire button click", () => {
     render(<CyberpunksModal {...mockProps} />);
-    const saveButton = screen.getByText("Save CyberGoon");
-    fireEvent.click(saveButton);
+    const hireButton = screen.getByText("Hire CyberGoon");
+    fireEvent.click(hireButton);
     expect(mockProps.onSave).toHaveBeenCalled();
   });
 
