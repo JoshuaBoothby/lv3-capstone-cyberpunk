@@ -54,3 +54,8 @@ This project serves as a personal game aid for Cyberpunk Red sessions. Data will
 - Cyberpunk goon stat information (credit: JonJon-the-wise)
 - Night Corp footer reference based on Cyberpunk RED lore
 - Styling inspired by Cyberpunk 2077 and Cyberpunk RED
+
+## Deployment
+
+- Live Site: [Cyberpunk Goon Manager](https://cyberpunk-red-goon-capstone.netlify.app)
+- Repository: [GitHub Repo](https://github.com/JoshuaBoothby/lv3-capstone-cyberpunk.git)
