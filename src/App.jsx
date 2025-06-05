@@ -45,15 +45,9 @@ function App() {
   }, []);
 
   function handleChange(e) {
-    const { name, value, type, checked, stats, cyberware, weapon } = e.target;
+    const { name, value, stats, cyberware, weapon } = e.target;
 
     setForm((prev) => {
-      // Handle checkbox inputs
-      if (type === "checkbox") {
-        return { ...prev, [name]: checked };
-      }
-
-      // Handle goon type selection with all its data
       if (name === "type" && stats) {
         return {
           ...prev,
@@ -64,12 +58,8 @@ function App() {
         };
       }
 
-      // Handle regular input changes
       return { ...prev, [name]: value };
     });
-
-    // Debug log to verify form state
-    console.log("Current form state:", form);
   }
 
   async function handleToggleKIA(id, kia) {

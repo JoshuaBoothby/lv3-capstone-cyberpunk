@@ -16,6 +16,7 @@ body {
 * {
     font-family: var(--font-family);
 }
+
 .navbar {
     background: linear-gradient(180deg, #000000 0%, var(--dark-bg) 100%);
     border-bottom: 2px solid var(--neon-pink);
@@ -158,7 +159,7 @@ h6::before {
     margin-bottom: 1rem;
   }
   
-  .modal-body p strong {
+.modal-body p strong {
     color: var(--neon-blue);
     display: block;
     margin-bottom: 0.5rem;
@@ -167,27 +168,20 @@ h6::before {
   }
   
  
-  .modal-body .text-muted {
-    color: #ffffff;
-    font-size: 0.95rem;
-    line-height: 1.5;
-  }
-  
- 
-  .modal-body ul li {
+.modal-body ul li {
     color: var(--cyber-yellow);
     font-size: 0.95rem;
     margin-bottom: 0.5rem;
   }
   
   
-  .modal-body p:has(strong:contains("Selected Weapon")) {
+.modal-body p:has(strong:contains("Selected Weapon")) {
     color: var(--cyber-yellow);
     font-weight: bold;
   }
   
 
-  .modal * {
+.modal * {
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
   }
 
@@ -207,10 +201,6 @@ h6::before {
 .form-select option {
     background-color: var(--dark-bg);
     color: white;
-}
-
-.text-muted {
-    color: #ffffff;
 }
 
 
