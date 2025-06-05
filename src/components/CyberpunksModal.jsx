@@ -95,20 +95,17 @@ export default function CyberpunksModal({
     const selectedType = e.target.value;
     const goonData = GOON_TYPES[selectedType] || {};
 
-    // Function to get random unique items from array
     const getRandomUnique = (array, count) => {
       const shuffled = [...array].sort(() => 0.5 - Math.random());
       return shuffled.slice(0, count);
     };
 
-    // Get unique cyberware selections based on goon type
     const numCyberware = selectedType === "Elite Goon" ? 2 : 1;
     const selectedCyberware = getRandomUnique(
       goonData.cyberware || [],
       numCyberware
     );
 
-    // Randomly select a weapon
     const randomWeaponIndex = Math.floor(
       Math.random() * goonData.weapons.length
     );
@@ -155,6 +152,11 @@ export default function CyberpunksModal({
               <div className="mt-2">
                 <small className="text-muted">
                   <p>
+                    <strong>Description:</strong>
+                  </p>
+                  <p className="mb-3">{GOON_TYPES[form.type].description}</p>
+
+                  <p>
                     <strong>Stats:</strong>
                   </p>
                   <ul>
@@ -169,6 +171,7 @@ export default function CyberpunksModal({
                     </li>
                     <li>Health: {GOON_TYPES[form.type].stats.health}HP</li>
                   </ul>
+
                   <p>
                     <strong>Selected Weapon:</strong> {form.weapon}
                   </p>
@@ -214,7 +217,7 @@ export default function CyberpunksModal({
           Cancel
         </Button>
         <Button variant="primary" onClick={onSave}>
-          Save Cyberpunk
+          Save CyberGoon
         </Button>
       </Modal.Footer>
     </Modal>

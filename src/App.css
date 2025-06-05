@@ -1,64 +1,233 @@
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
+:root {
+    --neon-pink: #ff2a6d;
+    --neon-blue: #05d9e8;
+    --cyber-yellow: #ffd700;
+    --dark-bg: #1a1a2e;
+    --cyber-purple: #7b2cbf;
+    --font-family: 'Chakra Petch', sans-serif;
 }
 
-.cyberpunk-lists {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-    margin-top: 20px;
+body {
+    background-color: var(--dark-bg);
+    color: #fff;
+    font-family: var(--font-family);
 }
 
-.btn-cyber {
-    background: #ff2a6d;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    margin: 5px;
-    cursor: pointer;
+* {
+    font-family: var(--font-family);
+}
+.navbar {
+    background: linear-gradient(180deg, #000000 0%, var(--dark-bg) 100%);
+    border-bottom: 2px solid var(--neon-pink);
+}
+
+.navbar-brand {
+    color: var(--neon-blue);
+    text-shadow: 0 0 10px var(--neon-blue);
+}
+
+
+.card {
+    background: rgba(26, 26, 46, 0.9);
+    border: 1px solid var(--neon-pink);
+    box-shadow: 0 0 15px rgba(255, 42, 109, 0.3);
+}
+
+.card-title {
+    color: var(--cyber-yellow);
+}
+
+
+.btn-primary,
+.btn-success {
+    background-color: var(--neon-blue);
+    border-color: var(--neon-blue);
+    color: var(--dark-bg);
+    text-transform: uppercase;
+    font-weight: bold;
     transition: all 0.3s ease;
 }
 
-.btn-cyber:hover {
-    background: #ff0055;
-    transform: translateY(-2px);
+.btn-primary:hover,
+.btn-success:hover {
+    background-color: var(--cyber-purple);
+    border-color: var(--cyber-purple);
+    box-shadow: 0 0 15px var(--neon-blue);
 }
 
-.cyberpunk-card {
-    background: #1a1a1a;
-    border: 2px solid #ff2a6d;
-    padding: 15px;
-    margin-bottom: 15px;
+.btn-danger {
+    background-color: var(--neon-pink);
+    border-color: var(--neon-pink);
+}
+
+.modal-content {
+    background-color: var(--dark-bg);
+    border: 2px solid var(--neon-blue);
+}
+
+.modal-header {
+    border-bottom: 1px solid var(--neon-pink);
+}
+
+.modal-footer {
+    border-top: 1px solid var(--neon-pink);
+}
+
+
+.form-control {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid var(--neon-blue);
     color: white;
 }
 
-.cyberpunk-image {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    margin-bottom: 10px;
+.form-control:focus {
+    box-shadow: 0 0 0 0.25rem rgba(5, 217, 232, 0.25);
 }
 
-.modal-cyber {
-    background: #1a1a1a;
+
+.badge {
+    background-color: var(--cyber-purple);
+    border: 1px solid var(--neon-pink);
     color: white;
-    border: 2px solid #ff2a6d;
 }
 
-.form-cyber input {
-    background: #2a2a2a;
-    color: white;
-    border: 1px solid #ff2a6d;
-    padding: 8px;
-    margin: 5px 0;
+
+footer {
+    background: linear-gradient(0deg, #000000 0%, var(--dark-bg) 100%);
+    border-top: 2px solid var(--neon-pink);
 }
 
-.cyberpunk-title {
-    color: #ff2a6d;
+
+h6 {
+    color: var(--neon-blue);
     text-transform: uppercase;
-    margin-bottom: 20px;
-    border-bottom: 2px solid #ff2a6d;
-    padding-bottom: 10px;
+    letter-spacing: 1px;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
 }
+
+
+h6::before {
+    content: '⟫';
+    color: var(--neon-pink);
+    margin-right: 8px;
+}
+
+
+.modal-title {
+    color: var(--neon-blue);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.modal-body {
+    color: var(--cyber-yellow);
+}
+
+.modal-body strong {
+    color: var(--neon-pink);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.modal-body small {
+    color: #ffffff;
+}
+
+.modal-body ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.modal-body li {
+    color: #ffffff;
+    margin-bottom: 5px;
+    padding-left: 15px;
+    position: relative;
+}
+
+.modal-body li::before {
+    content: "►";
+    color: var(--neon-pink);
+    position: absolute;
+    left: 0;
+}
+
+.modal-body p {
+    color: #ffffff;
+    margin-bottom: 1rem;
+  }
+  
+  .modal-body p strong {
+    color: var(--neon-blue);
+    display: block;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+ 
+  .modal-body .text-muted {
+    color: #ffffff;
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+  
+ 
+  .modal-body ul li {
+    color: var(--cyber-yellow);
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  
+  .modal-body p:has(strong:contains("Selected Weapon")) {
+    color: var(--cyber-yellow);
+    font-weight: bold;
+  }
+  
+
+  .modal * {
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
+  }
+
+.form-label {
+    color: var(--neon-blue);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+.form-select {
+    background-color: rgba(26, 26, 46, 0.9);
+    color: white;
+    border: 1px solid var(--neon-blue);
+}
+
+.form-select option {
+    background-color: var(--dark-bg);
+    color: white;
+}
+
+.text-muted {
+    color: #ffffff;
+}
+
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--dark-bg);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--neon-pink);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--neon-blue); }
+
+

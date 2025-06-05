@@ -39,7 +39,6 @@ export default function Cyberpunks({
                   <Badge bg="info">{cyberpunk.type}</Badge>
                 </Card.Title>
 
-                {/* Stats Section */}
                 {cyberpunk.stats && (
                   <div className="mb-3">
                     <h6>Stats:</h6>
@@ -64,7 +63,6 @@ export default function Cyberpunks({
                   </div>
                 )}
 
-                {/* Weapon Section */}
                 {cyberpunk.weapon && (
                   <div className="mb-3">
                     <h6>Weapon:</h6>
@@ -72,7 +70,6 @@ export default function Cyberpunks({
                   </div>
                 )}
 
-                {/* Cyberware Section */}
                 {cyberpunk.cyberware && cyberpunk.cyberware.length > 0 && (
                   <div className="mb-3">
                     <h6>Cyberware:</h6>
@@ -103,14 +100,14 @@ export default function Cyberpunks({
 
                 <div className="mt-auto d-flex gap-2">
                   <Button
-                    variant={cyberpunk.kia ? "success" : "danger"}
+                    variant={cyberpunk.kia ? "primary" : "danger"}
                     className="flex-grow-1"
                     onClick={() => toggleKIA(cyberpunk.id, !cyberpunk.kia)}
                   >
                     {cyberpunk.kia ? "Revive" : "Mark as KIA"}
                   </Button>
                   <Button
-                    variant="primary"
+                    variant="secondary"
                     onClick={() => onEditImage(cyberpunk)}
                   >
                     Edit Image
