@@ -150,7 +150,7 @@ export default function CyberpunksModal({
             </Form.Select>
             {form.type && GOON_TYPES[form.type] && (
               <div className="mt-2">
-                <small className="text-muted">
+                <small>
                   <p>
                     <strong>Description:</strong>
                   </p>
