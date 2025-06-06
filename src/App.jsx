@@ -155,7 +155,7 @@ function App() {
             />
           </Container>
         </main>
-        <Footer />
+        <Footer company="Night Corp" />
       </div>
     </>
   );

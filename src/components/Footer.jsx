@@ -1,7 +1,8 @@
 import React from "react";
 import { Container } from "react-bootstrap";
 
-export function Footer() {
+export function Footer({company}) {
+
   return (
     <footer className="bg-dark text-light py-4 mt-auto">
       <Container>
@@ -12,7 +13,7 @@ export function Footer() {
           </div>
           <div>
             <p className="mb-0">
-              © {new Date().getFullYear()} Night Corp. All rights reserved.
+              © {new Date().getFullYear()} {company} All rights reserved.
             </p>
           </div>
         </div>

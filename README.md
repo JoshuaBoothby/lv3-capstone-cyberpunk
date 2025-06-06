@@ -25,7 +25,7 @@ A React-based web application for managing NPC goons in Cyberpunk RED tabletop s
 
 - npm install
 
-3. Set up your AWS credentials in `.env`:
+3. Set up your AWS credentials in `.env.local`:
 
    VITE_AWS_REGION=your-region
    VITE_AWS_ACCESS_KEY_ID=your-key
